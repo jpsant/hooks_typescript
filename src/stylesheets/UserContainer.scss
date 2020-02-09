@@ -1,0 +1,8 @@
+.userContainer {
+    display: grid;
+    grid-template-rows: auto;
+
+    &__child-element {
+        padding: 1%;
+    }
+}
