@@ -33,13 +33,15 @@ const UserDetails: React.FC<IUserDetails> = ({ history }) => {
 
     React.useEffect(() => { getUserDetails() }, [id]);
 
+
+
     return (
         <>
             <div>
                 <h1>User details page!</h1>
             </div>
             <div>
-                <UsersContainer name={user.name} username={user.username} email={user.email} phone={user.phone} website={user.website} />
+                <UsersContainer {...user} />
             </div>
             <button onClick={() => history.goBack()} >Go back!</button>
         </>

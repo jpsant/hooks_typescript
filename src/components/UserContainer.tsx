@@ -1,8 +1,16 @@
 import * as React from 'react';
-import { User } from './UserDetails';
 import '../stylesheets/UserContainer.scss';
 
-const UserContainer: React.FC<User> = ({ name, username, email, phone, website }) => {
+interface IProps {
+    name: string,
+    username: string,
+    email: string,
+    phone: string,
+    website: string
+}
+
+const UserContainer: React.FC<IProps> = ({ name, username, email, phone, website }) => {
+
     return (
         <>
             <div className="userContainer">
